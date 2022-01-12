@@ -19,7 +19,7 @@ const age = currentDateTime < birthday ? currentYear - 1999 - 1 : currentYear - 
 
 // Set background year
 dateyear.innerText = currentYear;
-yearold.innerText = `${age}y`;
+yearold.innerText = `${age}rd Birthday!`;
 
 // time values
 const s = 1000
