@@ -19,7 +19,6 @@ const age = currentDateTime < birthday ? currentYear - 1999 - 1 : currentYear - 
 
 // Set background year
 dateyear.innerText = currentYear;
-yearold.innerText = `${age}rd Birthday!`;
 
 // time values
 const s = 1000
@@ -38,6 +37,8 @@ function updateCountdown() {
   
   // JavaScript Ternary Operator 
   const timeSpan = (birthday < now) ? nextBirthday - now : birthday - now;
+  const nextAge =  (birthday < now) ? age+1 : age;
+
 
   const day = Math.floor(timeSpan / d);
   const hour = Math.floor((timeSpan % d) / h);
@@ -47,10 +48,11 @@ function updateCountdown() {
    const April = now.getMonth() === birthday.getMonth() && now.getDate() === birthday.getDate()
 
   if (April) {
-    console.log('Happy Birthday Sushil')
+    console.log('Happy Birthday Sushil Sharma')
     message.innerHTML = '<br> Guys and Gals, It gives me great pleasure to notify you that today is my birthday.<br>Happy Birthday!! Hope I had a nice Birthday Bash!!'
     countdown.style.display = "none"
     birthdayTime.style.display = "none"
+    yearold.innerText = `${age} Birthday!`;
     clearInterval(timerId)
     return
   }
@@ -61,6 +63,7 @@ function updateCountdown() {
     hours.innerHTML = hour < 10 ? '0' + hour : hour;
     minutes.innerHTML = minute < 10 ? '0' + minute : minute;
     seconds.innerHTML = second < 10 ? '0' + second : second; 
+    yearold.innerText = `${nextAge} Birthday!`;
   }
 }
 
