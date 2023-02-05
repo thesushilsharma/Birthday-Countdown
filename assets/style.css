@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
 
 * {
   box-sizing: border-box;
-  }
+}
 
 body {
-  background-image: url('https://source.unsplash.com/1024x768/?birthday');
+  background-image: url("https://source.unsplash.com/1024x768/?birthday");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100vh;
+  width: 100%;
   color: #fff;
   font-family: "Audiowide", sans-serif;
   display: flex;
@@ -21,9 +22,21 @@ body {
   overflow: hidden;
 }
 
+body::before {
+  content: "\A";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.25); */
+  background-color: rgba(102, 255, 255, 0.507);
+  
+}
+
 /* Add a dark overlay */
 body::after {
-  content: '\A';
+  content: "\A";
   position: absolute;
   top: 0;
   left: 0;
@@ -42,30 +55,31 @@ h1 {
 }
 
 span {
+  padding: 20px;
   font-size: 60px;
-  margin: -40px 0 40px;
 }
 
 .dateyear {
-  font-size: 200px;
-  color: #FBF7F4;
+  font-size: 150px;
+  color: red;
   z-index: -1;
-  opacity: 80;
+  opacity: 10;
   position: absolute;
-  top: -40px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .yearold {
   font-size: 80px;
-  color: #0033ff;
+  color: darkblue;
   z-index: -1;
   opacity: 80;
   position: absolute;
   bottom: -3px;
   left: 50%;
   transform: translateX(-50%);
+  margin: -80px 0 30px;
 }
 
 .message {
@@ -73,7 +87,8 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 150px;
+  margin: -80px 0 30px;
 }
 
 .countdown {
@@ -93,14 +108,12 @@ span {
   margin: 0 0 5px;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
+/* Media query for smaller screens */
 @media screen and (max-width: 600px) {
+  
+
   h1 {
     font-size: 40px;
-    color: black;
-  }
-  .dateyear .message .yearold {
-    font-size: 30px;
   }
 
   .clock {
@@ -112,7 +125,29 @@ span {
     margin: 0;
   }
 
+  .dateyear {
+    font-size: 100px;
+  }
+
+  span {
+    padding: 10px;
+    font-size: 40px;
+  };
+
   .clock small {
+    font-size: 10px;
+  }
+
+  .yearold {
+    font-size: 40px;
+  }
+
+  .message {
+    width: 100%;
+    padding: 10px;
     font-size: 20px;
+    height: 100px;
   }
 }
+
+
