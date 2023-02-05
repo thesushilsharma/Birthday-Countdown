@@ -52,7 +52,7 @@ function updateCountdown() {
     message.innerHTML = '<br> Guys and Gals, It gives me great pleasure to notify you that today is my birthday.<br>Happy Birthday!! Hope I had a nice Birthday Bash!!'
     countdown.style.display = "none"
     birthdayTime.style.display = "none"
-    yearold.innerText = `${age+1} Birthday!`;
+    yearold.innerText = `${age+1}th Birthday!`;
     clearInterval(timerId)
     return
   }
@@ -63,7 +63,7 @@ function updateCountdown() {
     hours.innerHTML = hour < 10 ? '0' + hour : hour;
     minutes.innerHTML = minute < 10 ? '0' + minute : minute;
     seconds.innerHTML = second < 10 ? '0' + second : second; 
-    yearold.innerText = `${nextAge} Birthday!`;
+    yearold.innerText = `${nextAge}th Birthday!`;
   }
 }
 
