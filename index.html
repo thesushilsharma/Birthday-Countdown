@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets\style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="description"
         content="Sushil Sharma has vast experience in website designing, development, and optimization, and is also proficient in WordPress. I am in charge of testing and maintaining the applications and websites I develop, as well as the documentation that goes with them." />
     <meta name="author" content="Sushil Sharma's Birthday" />
@@ -15,31 +15,42 @@
 </head>
 
 <body>
-    <div id="dateyear" class="dateyear"></div>
-    <div id="yearold" class="yearold"></div>
-    <div id="message" class="message"></div>
-    <h1 id="birthdayTime">Birthday Countdown:</h1>
-    <span>The Day of Sushil Sharma</span>
+    <main>
+        <section
+            class="w-full h-screen bg-center bg-cover bg-no-repeat bg-[url('https://source.unsplash.com/1024x768/?birthday')] flex items-center justify-center">
+            <div class="backdrop-blur-xl p-8 font-mono">
+                <div id="dateyear" class="dateyear text-center mt-4 text-3xl font-bold text-red-600"></div>
+                <div id="yearold" class="yearold text-center mt-2 text-7xl font-semibold text-gray-700 underline decoration-double"></div>
+                <div id="message"
+                    class="message text-center mt-4 text-4xl text-blue-700 font-semibold">Now
+                    you can
+                    sleep
+                    until your birthday. Hurray!</div>
+                <span class="text-center block mb-4 text-4xl text-purple-600 underline decoration-wavy">The Day of Sushil Sharma</span>
+                <h1 id="birthdayTime" class="text-5xl font-bold text-gray-800 text-center my-4">Birthday Countdown:</h1>
 
-    <div id="countdown" class="countdown">
-        <div class="clock">
-            <h2 id="days">00</h2>
-            <small>days</small>
-        </div>
-        <div class="clock">
-            <h2 id="hours">00</h2>
-            <small>hours</small>
-        </div>
-        <div class="clock">
-            <h2 id="minutes">00</h2>
-            <small>minutes</small>
-        </div>
-        <div class="clock">
-            <h2 id="seconds">00</h2>
-            <small>seconds</small>
-        </div>
 
-    </div>
+                <div id="countdown" class="countdown flex justify-center">
+                    <div class="clock text-center mx-2">
+                        <h2 id="days" class="text-6xl font-bold text-red-600">00</h2>
+                        <small class="text-base text-slate-950">days</small>
+                    </div>
+                    <div class="clock text-center mx-2">
+                        <h2 id="hours" class="text-6xl font-bold text-red-600">00</h2>
+                        <small class="text-base text-slate-950">hours</small>
+                    </div>
+                    <div class="clock text-center mx-2">
+                        <h2 id="minutes" class="text-6xl font-bold text-red-600">00</h2>
+                        <small class="text-base text-slate-950">minutes</small>
+                    </div>
+                    <div class="clock text-center mx-2">
+                        <h2 id="seconds" class="text-6xl font-bold text-red-600">00</h2>
+                        <small class="text-base text-slate-950">seconds</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="assets\main.js"></script>
 </body>
